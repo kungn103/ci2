@@ -1,7 +1,7 @@
 /* overall layout */
 body{
     background-image: url("sparkle.gif"); background-repeat: repeat;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .container{
     display: inline-flex;

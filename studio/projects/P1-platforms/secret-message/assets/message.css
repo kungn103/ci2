@@ -1,0 +1,13 @@
+body {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	font-family: monospace;
+	color: whitesmoke;
+	text-align: center;
+	background-image: url(starry-bg.gif);
+}
+
+.container{
+	padding: 30vh;
+}

@@ -1,0 +1,17 @@
+body {
+	height: 100vh;
+	width: 100vw;
+	font-family: monospace;
+	color: whitesmoke;
+	text-align: center;
+	background-image: url(starry-bg.gif);
+}
+
+h2 {
+	font-size: 32px;
+}
+
+span:hover{
+	color: yellowgreen;
+	transform: zoom(1.5);
+}

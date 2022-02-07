@@ -1,7 +1,8 @@
 /* overall layout */
 body{
     background-image: url("fire-bg.gif.crdownload"); background-size: cover;
-    /* overflow: hidden; */
+    overflow: hidden;
+    cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1157.ani), url(https://ani.cursors-4u.net/cursors/cur-13/cur1157.png), auto;
 }
 .container{
     display: inline-flex;
