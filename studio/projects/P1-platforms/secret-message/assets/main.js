@@ -3,8 +3,8 @@
 function enterPassword() {
   let text;
   let person = window.prompt("WHAT'S THE PASSWORD?");
-  if (person == "DEADFLORALS" || person == "DEAD FLORALS" || person == "Dead Florals" || person == "dead florals") {
-    text = "R2QrdnFHNVIxZjV6OXJxR0tnOWRrL3FlRG9HSnBFbExpMGJ4Mm9ZS3lIWlhUQktmRUs1UEh5U\nkRoVW9mamZteWZLemszVnZ6SGZzSC9SVlI0Z2RTckEzQ0N4NkRrbzZsdTRtang\n5UWFtTlM4R2Qvd1FycGxNLzlrVjBRT1BzeGZiL1ZxYTM2c2oxUzhQYXdEeEhxczhCWjMzMDU4TjZRRzBmWlI4M1llK0VFdUxCT1lOK\n05jRTE3bDBCS0lBMjh3NmptVDdjZEJUb2NLRGZycnhVL1htOThNTVk2V1pkdmlONG5NT0RvNklibHpxc\nXl4YWszQVJNbjBlWll0STJ1VjkzM21vYThJWmFMeW1iMElBMXRHTWU3QjlBejgrdTRiR1lKYktTVXFtUS9uRkIzNElMTm9Bd29vZi9nWDJUdWw0b1pwa\nU90bG42WE1NSENReWZoeTBSMmdrNXlPR3hrVG1tL2ZjbERyeWp3QWx\nCWFVDdm0zMzlsM0xkeHZ4VEZNOjrGfi9OrleMz+ks0jX7IP"+'/'+"x"; 
+  if (person == "dead florals") {
+    text = "R0ZNdmx6U0JrTVBIYUVRTmFjNDhnTE9kUHhhclJ4RG5lbjF0djk0dENCbDBFcG1BMTVaQkQyZ0VpM25FWjdRNStheW5sSldNN2Z1T053SmUy\nRUpha2pjR25hWlFabElCQTBaTmlNTmc0VlVnV0xuVmNwd0lpTU1wNGVpaGx4OHV1MjVYU280cytiZ0hRaXpNVldIektHY0RyUk1PRUhyYlQ5LzRXZThwWkdtY\nUIxSkdCMnpNRXFGSFlIbDdKdlVuUlh2UjhnRW5GWW10ckNKYXdqeGtrK3RXallscUk3aXJQc3Y5bE9USjFsbEs4bEhCSEVKcDBmK3JWdUpsTmNnVEVZTnd\nVaEVDOUVHMFk3OTFhRHVkVnJudWN5RmlPSlN5eFJGU01LWjRTak9NSG1paGoyc2Naam95UUx\nVRUFlckhTZmhnQWtjMU56OTZENWNEY3NTREN2VzRBa0NQc2xqM2VrT1VRMnRGSGZ1Y3VkbWhT\ncDVxenloVDRONEpXTS93Ojoqtga3rTCKTIQ39UfaKrhg"
   } 
   else {
     text = "Refresh. Try Again."; 
