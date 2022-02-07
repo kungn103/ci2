@@ -1,0 +1,108 @@
+/* overall layout */
+body{
+    background-image: url("sparkle.gif"); background-repeat: repeat;
+    /* overflow: hidden; */
+}
+.container{
+    display: inline-flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw; 
+}
+
+/* sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 2;
+    width: 20vw;
+    height: 100vh;
+    color: #E021FF;
+    background-image: url("green-stars.gif"); background-size: 100%;
+    z-index: 2;
+    align-content: center;
+}
+
+/* animating avatar */
+@keyframes spin{
+    0% {transform: rotateY(0deg);}
+    50%{transform: rotateY(150deg);}  
+    100%  {transform: rotateY(-150deg);}
+}
+
+.ubetea {
+    position: relative;
+    align-items: center;
+    margin-left: 8%; 
+    margin-top: 6vh;
+    object-fit: cover;
+    animation: spin 10s infinite; 
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+h2{text-decoration: underline; font-size: 6vh; }
+#secret{text-decoration: underline; opacity:0; font-size: 6vh;}
+
+.sidebar-content{
+    margin-left: 1vw;
+    margin-top: 10vh;
+}
+
+#secret:hover{
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+/* main section */
+.content{
+    height: 90vh;
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 2;
+    min-width: 0;
+}
+
+.title {
+    position: relative;
+    animation: spin-1 2s infinite; 
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    flex-shrink: 2;
+}
+
+/* animating title */
+@keyframes spin-1{
+    0% {transform: rotatex(0deg);}
+    100%{transform: skew(10deg);}  
+}
+
+/* hehemj */
+.hehemj{
+    position: relative;
+    display: inline-flex;
+    flex-shrink: 2;
+    bottom:30vh;
+}
+
+.caption{
+    font-family: Comic Sans Ms, Comic Sans;
+    color: #5B21FF;
+    font-size: 3vh;
+    margin-top: 10vh;
+}
+
+.blog{
+    font-family: Comic Sans Ms, Comic Sans;
+    color: turquoise;
+}
+
+/* arrows */
+.arrows{
+    background-color: yellow;
+    width: 80vw;
+    height: 10vh;
+}
+
