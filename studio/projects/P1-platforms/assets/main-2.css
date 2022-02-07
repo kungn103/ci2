@@ -1,6 +1,6 @@
 /* overall layout */
 body{
-    background-image: url("sparkle.gif"); background-repeat: repeat;
+    background-image: url("fire-bg.gif.crdownload"); background-size: cover;
     /* overflow: hidden; */
 }
 .container{
@@ -16,8 +16,8 @@ body{
     flex-shrink:2;
     width: 20vw;
     height: 100vh;
-    color: #E021FF;
-    background-image: url("green-stars.gif"); background-size: 100%;
+    color: #00ff00;
+    background-image: url("fire-bg.png"); background-size: 100%;
     z-index:2;
     align-content: center;
 }
@@ -33,6 +33,11 @@ body{
     50%{opacity: 0;}
 }
 
+@keyframes rotate{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
 #ubetea{
     width: 70%; max-height: 100%;
     position: relative;
@@ -45,16 +50,11 @@ body{
 }
 
 h2{text-decoration: underline; font-size: 6vh;}
-#secret{text-decoration: underline; font-size: 6vh;animation: blink 0.7s step-start infinite;}
+#nav{text-decoration: underline; font-size: 6vh;font-weight: lighter;}
 
 .sidebar-content{
     margin-left: 10%;
     margin-top: 10vh;
-}
-
-#secret:hover{
-    opacity: 1;
-    cursor: not-allowed;
 }
 
 /* main section */
@@ -87,9 +87,8 @@ h2{text-decoration: underline; font-size: 6vh;}
     position: relative;
     display: inline-flex;
     flex-shrink:2;
-    animation: spin 10s infinite; 
+    animation: rotate 3s infinite; 
     animation-direction: alternate;
-    animation-timing-function: ease-in-out;
     margin-top: -7vh;
 }
 
@@ -99,7 +98,7 @@ h2{text-decoration: underline; font-size: 6vh;}
 
 .caption{
     font-family: Comic Sans Ms, Comic Sans;
-    color: #5B21FF;
+    color:#00ff80;
     font-size: 3vh;
     margin-top: 10vh;
 }
@@ -113,6 +112,15 @@ p{
     margin-left: 10vw;
     margin-right: 10vw;
     font-size: 3.5vh;
+}
+
+#confession{
+    height: 50%; max-width: 70%;
+    position: relative;
+    animation: spin-1 2s infinite; 
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    flex-shrink: 2;
 }
 
 #arrow{
