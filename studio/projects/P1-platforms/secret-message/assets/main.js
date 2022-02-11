@@ -1,5 +1,3 @@
-// getting name from user 
-
 function enterPassword() {
   let text;
   let person = window.prompt("WHAT'S THE PASSWORD?");
@@ -13,8 +11,6 @@ function enterPassword() {
 }
 
 window.onload = enterPassword()
-
-
 
 
 

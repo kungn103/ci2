@@ -5,13 +5,19 @@ body {
 	color: whitesmoke;
 	text-align: center;
 	background-image: url(starry-bg.gif);
+	cursor: url(cursor.png), auto;
 }
 
 h2 {
-	font-size: 32px;
+	font-size: 8vh;
+}
+
+h2:hover{
+	cursor: url(cursor.png), auto;
 }
 
 span:hover{
 	color: yellowgreen;
-	transform: zoom(1.5);
+	transform: scale(1.5)
 }
+
