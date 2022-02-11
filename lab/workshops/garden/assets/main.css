@@ -1,0 +1,152 @@
+body{
+    background: linear-gradient(-45deg, #361105, #200101, #056e58, #3a0707);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    animation-direction: alternate-reverse;
+	height: 100vh;
+    overflow: hidden;
+    cursor: url('cursor-1.cur'), auto;
+    font-family: Helvetica, sans-serif;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 40%;
+	}
+	50% {
+		background-position: 80% 50%;
+	}
+	100% {
+		background-position: 0% 30%;
+	}
+}
+
+.smile{
+    margin-left: 5vw;
+    margin-top: 10vh;
+    width: 20vw;
+}
+
+#no-smile{
+    height: 30vh;
+    position: relative;
+    transform: rotate(10deg);
+}
+
+#smile{
+    height: 30vh;
+    position: absolute;
+    z-index: 2;
+    right: 75vw;
+    opacity: 0;
+    transform: rotate(10deg);  
+}
+
+.smile:hover #smile{
+    opacity: 1;
+    transition: 0.1s ease;
+    cursor: none;
+}
+
+.smile:hover #no-smile{
+    opacity: 0;
+    transition: 0.1s ease;
+}
+
+.holding-vial{
+    margin-left: 30vw;
+    margin-right: 20vw;
+}
+
+#no-arm{
+    height: 50vh;
+    position: relative;
+}
+
+#arm{
+    height: 50vh;
+    position: absolute;
+    z-index: 2;
+    right: 53vw;
+    opacity: 0;
+    transform: rotate(90);
+    transition: 0.5 ease;
+}
+
+.holding-vial:hover #arm{
+    opacity: 1;
+    animation: arm-rotate 0.5s linear; 
+    animation-fill-mode: forwards;
+    transform-origin: bottom;
+    width: 20vw;
+    cursor: none;
+}
+
+#no-arm:hover{
+    cursor: none;
+}
+
+@keyframes arm-rotate {
+    0% {transform: rotate(90deg);}
+    50% {transform: rotate(45deg);}
+    100%{transform: rotate(0deg);}
+}
+
+.minilab{
+    margin-top: -80vh;
+    margin-left: 70vw;
+}
+
+#minilab-off{
+    height: 50vh;
+    position: relative;
+}
+
+#minilab-on{
+    height: 50vh;
+    position: absolute;
+    bottom: 39vh;
+    opacity: 0%;
+}
+
+.minilab:hover{
+    cursor: url('cursor.cur'), auto;
+}
+
+.minilab:hover #minilab-on{
+    opacity: 1;
+}
+
+.minilab:hover #minilab-off{
+    opacity: 0;
+}
+
+#vial{
+    height: 20vh;
+    margin-left: 10vw;
+}
+
+#vial:hover{
+    animation: spin 0.5s infinite;
+    cursor: none;
+}
+
+
+@keyframes spin {
+    from{transform: rotate(0deg)}
+    to{transform:rotate(360deg)}
+}
+
+#title{
+    text-align: center;
+    color: rgb(216, 216, 216);
+    margin-top: -70vh;
+    font-size: 5vh;
+    padding-left: 30vw;
+    padding-right: 30vw;
+}
+
+#title:hover{
+    transform: skew(10deg);
+    filter: blur(4px);
+}
