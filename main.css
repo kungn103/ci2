@@ -1,0 +1,67 @@
+body {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	font-family: 'Barlow', sans-serif;
+	background-color: darkslategray;
+	color: whitesmoke;
+	text-align: left;
+	cursor: url('cursor.cur'), auto;
+	animation: colorshift 3.7s infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+	-webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	margin-top: 10%;
+	margin-left: 1vw;
+}
+
+@keyframes colorshift {
+
+from {background-color: #2F4F4F; 
+ 	;}
+
+to {background-color: #47919e; }
+ }
+
+h1:hover{
+	color: greenyellow;
+	transform: skew(10deg);
+	filter: blur(2px);
+}
+
+p:hover{
+	color: greenyellow;
+	transform: skew(10deg);
+	filter: blur(2px);
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link{
+	color: whitesmoke;
+}
+
+a:active{
+	color: greenyellow;
+	transform: skewX(-10deg);
+}
+
+a:visited{
+	color: lightgrey;
+}
+
+a:hover{
+	transform: skewX(-10deg);
+	color: greenyellow;
+}
+
+h1{ 
+	font-size: 5vh;
+ }
+
