@@ -1,0 +1,166 @@
+*{
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #6C5044;
+  color: #EAE7E7;
+  margin: 0% 1% 1% 0%;
+  overflow-x: hidden;
+}
+/* title setup*/
+h1, .the, .new, .art, .of, .making, .books{
+  font-family: roc-grotesk-wide, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20vh;
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  height: 100vh;
+  width: 100vw;
+}
+/* title animation */
+.the{
+  opacity: 0;
+  animation: textenter 3s;
+animation-delay: 1.0s;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+}
+.new{
+  opacity: 0;
+  animation: textenter 3s;
+animation-delay: 1.2s;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+}
+.art{
+  opacity: 0;
+  animation: textenter 3s;
+animation-delay: 1.4s;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+}
+.of{
+  opacity: 0;
+  animation: textenter 3s;
+animation-delay: 1.6s;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+}
+.making{
+  opacity: 0;
+  animation: textenter 3s;
+animation-delay: 1.8s;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+}
+.books{
+  opacity: 0;
+  animation: textenter 3s;
+animation-delay: 2s;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+}
+.names{
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-left: 3%;
+  opacity: 0;
+  animation: textenter 3s;
+animation-delay: 3s;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+}
+h3{
+font-family: roc-grotesk, sans-serif;
+font-weight: 500;
+font-style: normal;
+font-size: 5vh;
+}
+h4{
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2vh;
+  margin-top: 1.6%;
+}
+
+/* creating dividers */
+.section-divider{
+  height: 40vh;
+  width: 100vw;
+}
+
+.content-divider{
+  height: 50vh;
+  width: 100vw;
+}
+
+/* section title */
+.section-title{
+  width: 100vw;
+  height: 100vh;
+  margin-left: -2%;
+}
+h2{
+  font-family: roc-grotesk-wide, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15vh;
+  text-align: end;
+}
+
+/* section content */
+/* .horizontal-section-content{
+  height: 100vh;
+  width: 100vw;
+  text-align: end;
+} */
+.horizontal-section-content{
+  display:flex;
+  overflow-x: hidden;
+}
+
+
+
+/* animations */
+@keyframes textenter{
+  from{opacity: 0%;}
+  to{opacity: 100%;}
+}
+/* transitions */
+.reveal{
+  position: relative;
+  transform: translateY(10vh);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide{
+  position: relative;
+  transform: translateX(10vw);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.slide.active{
+  transform: translateX(-10vw);
+  opacity: 1;
+}
