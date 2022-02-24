@@ -1,0 +1,102 @@
+*{
+    font-family: neue-haas-unica,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 10vh;
+    cursor: url('cursor.cur'),auto;
+}
+
+body{
+padding: 5% 5% 0% 5%;
+text-align: center;
+overflow: hidden;
+}
+
+.next{
+    text-align: end;
+    font-size: 2vh;
+}
+
+a{
+    color: darkslateblue;
+    text-decoration: none;
+}
+
+a:visited{
+    color: darkseagreen;
+}
+
+a:hover {
+    color: cadetblue;
+}
+
+.internet, .chokehold, .uncut{
+    display: inline-flex;
+    filter: blur(30px);
+}
+
+.internet:hover{
+    color: rgb(65, 65, 253);
+    transform: skew(10deg);
+    text-decoration: underline;
+    font-size: larger;
+    filter: blur(0px);
+}
+
+.chokehold:hover{
+    letter-spacing: -3vw;
+    font-size: 20vh;
+    color: rgb(75, 14, 4);
+    filter: blur(0px);
+}
+
+.uncut:hover{
+    transform: skew(20deg);
+    font-size: 20vh;
+    color: rgb(114, 18, 204);
+    filter: drop-shadow(0 0 0.75rem rgb(212, 0, 255));
+    filter: blur(0px);
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        background-color: rgb(230, 184, 218);
+        color: rgb(255, 227, 248);
+    }
+
+    .internet{
+        animation: skew 3s alternate-reverse ease-in-out infinite;
+        animation-delay: 2s;
+    }
+
+    .chokehold{
+        animation: choke 5s alternate-reverse ease-in-out infinite;
+        animation-delay: 3s;
+    }
+
+    .uncut{
+        animation: gemz 3s alternate-reverse ease-in-out infinite;
+        animation-delay: 4s;
+    }
+}
+
+@keyframes choke{
+    from{letter-spacing: normal; color: brown;}
+    to{letter-spacing: -0.8vw; color: rgb(129, 16, 39);}
+}
+
+@keyframes skew{
+    from{transform: skew(10deg); color: cadetblue;}
+    to{transform: matrix(1,2,3,4,5,6); color: blue;}
+}
+
+@keyframes gemz{
+ from{transform: skew(20deg);
+    font-size: 20vh;
+    color: rgb(114, 18, 204);
+    filter: drop-shadow(0 0 0.75rem rgb(212, 0, 255));}
+to{transform: skew(0deg);
+    font-size: 20vh;
+    color: rgb(114, 18, 204);
+    filter: drop-shadow(0 0 0.75rem rgb(212, 0, 255));}
+}

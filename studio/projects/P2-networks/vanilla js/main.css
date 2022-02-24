@@ -129,7 +129,7 @@ h2{
 }
 /* horizontal section content */
 ::-webkit-scrollbar {
-  width: 1vw;
+  width: 0vw;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
