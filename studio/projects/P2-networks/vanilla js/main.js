@@ -33,3 +33,21 @@ function reveal() {
   }
   
   window.addEventListener("scroll", slide);
+
+  function slideHorz() {
+    var slides = document.querySelectorAll(".slide-horz");
+  
+    for (var i = 0; i < slides.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = slides[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        slides[i].classList.add("active");
+      } else {
+        slides[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", slideHorz);
