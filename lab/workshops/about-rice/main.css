@@ -1,5 +1,10 @@
 *{
-	background-color: rgb(138, 49, 49);
+	background-image: url('rice-bg.jpeg');
+	background-position: center;
+  	background-repeat: no-repeat; 
+  	background-size: cover; 
+	background-blend-mode:screen;
+	background-color: #8a3131;
 	color: rgb(255, 255, 209);
 	cursor: help;
 }
@@ -46,6 +51,11 @@ font-size: 3vh;
 
 .container{
 	display: inline-flex;
+	flex-shrink: 2;
+}
+
+.text{
+	flex-shrink: 1;
 }
 
 p{
@@ -69,4 +79,21 @@ blockquote:hover{
 
 .text{
 	padding-left: 5%;
+}
+
+
+@media screen and (max-width: 600px){
+	*{
+		background-color: #8a3131;
+		color: rgb(255, 255, 209);
+		cursor: help;
+	}
+
+	.quote{
+	animation: colorShift 3s alternate-reverse infinite ease-in-out;}
+}
+
+@keyframes colorShift {
+	from{color: currentColor;}
+	to{color: darksalmon;}
 }
