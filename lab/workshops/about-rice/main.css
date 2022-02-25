@@ -1,8 +1,72 @@
+*{
+	background-color: rgb(138, 49, 49);
+	color: rgb(255, 255, 209);
+	cursor: help;
+}
 body{
 	font-family: ivymode, sans-serif;
 	font-weight: 200;
 	font-style: normal;
+	overflow-x: hidden;
 }
 
 #rice{
+	height: 80vh;
+	animation: ricevibe 5s ease-in-out alternate-reverse infinite;
+	background: none;
+}
+
+#rice:hover{
+	transform: scale(1.1);
+	transition: transform 1s ease-in;
+	animation-play-state: paused;
+}
+
+h1{
+	text-align: start;
+	font-size: 8vh;
+}
+
+h1:hover{
+	text-shadow: 2px 2px 5px rgb(49, 49, 49);
+}
+
+@keyframes ricevibe{
+	from{transform: rotate(20deg);}
+	to{transform: rotate(-20deg);}
+}
+
+h2{
+text-align: start;
+font-family: ivymode, sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 3vh;
+}
+
+.container{
+	display: inline-flex;
+}
+
+p{
+	font-size: 2vh;
+	letter-spacing: 0.08vw;
+}
+
+blockquote{
+text-align: start;
+font-family: ivymode, sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 3vh;
+color: rgb(233, 255, 36);
+ background-color: none;
+}
+
+blockquote:hover{
+	transform: scale(1.1);
+}
+
+.text{
+	padding-left: 5%;
 }
