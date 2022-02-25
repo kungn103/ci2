@@ -86,7 +86,7 @@ blockquote:hover{
 }
 
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
 	*{
 		background-color: #004f8f;
 		color: rgb(255, 255, 209);
