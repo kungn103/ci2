@@ -54,6 +54,10 @@ font-size: 3vh;
 	flex-shrink: 2;
 }
 
+.rice{
+	flex-shrink: 2;
+}
+
 .text{
 	flex-shrink: 1;
 }
@@ -82,18 +86,23 @@ blockquote:hover{
 }
 
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 768px) {}
 	*{
-		background-color: #8a3131;
+		background-color: #004f8f;
 		color: rgb(255, 255, 209);
 		cursor: help;
+		overflow-x: visible;
 	}
 
-	.quote{
+	blockquote{
 	animation: colorShift 3s alternate-reverse infinite ease-in-out;}
+
+	body{
+		display: block;
+	}
 }
 
 @keyframes colorShift {
-	from{color: currentColor;}
+	from{color: rgb(121, 39, 19);}
 	to{color: darksalmon;}
 }
