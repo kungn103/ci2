@@ -102,6 +102,29 @@ blockquote:hover{
 	}
 }
 
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	*{
+		background-color: #004f8f;
+		color: rgb(255, 255, 209);
+		cursor: help;
+		overflow-x: visible;
+		display: block;
+	}
+
+	blockquote{
+	animation: colorShift 3s alternate-reverse infinite ease-in-out;}
+
+	body{
+		display: ;
+	}
+
+  }
+
+
 @keyframes colorShift {
 	from{color: rgb(121, 39, 19);}
 	to{color: darksalmon;}
