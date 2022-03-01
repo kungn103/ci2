@@ -2,10 +2,15 @@
   font-family: roc-grotesk, sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #6C5044;
+  /* background-color: #6C5044; */
   color: #EAE7E7;
   overflow-x: hidden;
 }
+
+body{
+  background-color: #6C5044;
+}
+
 
 /* title setup*/
 h1, .the, .new, .art, .of, .making, .books{
@@ -142,17 +147,22 @@ h2{
   background: #6e5348; 
 }
 
+#white-wrap{
+  background-color: #EAE7E7;
+  z-index: -1;
+  height: 100%;
+  width: 100vw;
+  overflow: auto;
+}
+
 .horz-container{
-  position:sticky;
   display:block;
-  width:100vh;
+  width:100%;
   height:100vw;
   overflow-y:auto;
   overflow-x:hidden;
   transform:rotate(-90deg) translateY(-100vh);
   transform-origin:right top;
-  margin-left: 10%;
-  
 }
 .horz-container > div{
   display:block;
@@ -171,13 +181,10 @@ p{
   font-family: roc-grotesk, sans-serif;
   font-weight: 300;
   font-style: normal;
+  color: #6e5348;
 }
 
 /* prose */
-.prose{
-  position: sticky;
-}
-
 
 /* animations */
 @keyframes textenter{
@@ -213,7 +220,6 @@ p{
   position: relative;
   transform: translateX(10vw);
   opacity: 0;
-  background-color: ;
   transition: 2s all ease;
 }
 
@@ -222,13 +228,24 @@ p{
   opacity: 1;
 }
 
+.reveal-horz{
+  position: relative;
+  transform: translateX(10vh);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reveal-horz.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+
 /* javascript-sticky */
 
-.sticky{
-  position: relative;
+.sticky {
+  position: fixed;
+  top: 0.5vh;
+  width: 100%;
 }
 
-.sticky.active{
-  position: fixed;
-}
 

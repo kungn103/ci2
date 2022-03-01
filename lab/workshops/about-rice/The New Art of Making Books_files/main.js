@@ -52,22 +52,14 @@ function reveal() {
   
   window.addEventListener("scroll", slideHorz);
 
+window.onscroll = function() {myFunction()};
+var white = document.getElementById("white-wrap");
+var sticky = white.offsetTop;
 
-  function sticky() {
-    var slides = document.querySelectorAll(".sticky");
-  
-    for (var i = 0; i < slides.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = slides[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-  
-      if (elementTop < windowHeight - elementVisible) {
-        slides[i].classList.add("active");
-      } else {
-        slides[i].classList.remove("active");
-      }
-    }
-  }
-  
-  window.addEventListener("scroll", sticky);
-
+// function myFunction() {
+//   if (window.pageYOffset >= sticky) {
+//     white.classList.add("sticky")
+//   } else {
+//     white.classList.remove("sticky");
+//   }
+// }
