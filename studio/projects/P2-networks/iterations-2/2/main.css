@@ -1,0 +1,623 @@
+*{
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* background-color: #6C5044; */
+  color: #EAE7E7;
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #6C5044;
+}
+
+
+/* title setup*/
+h1, .the, .new, .art, .of, .making, .books{
+  font-family: roc-grotesk-wide, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20vh;
+}
+
+.title-container{
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  margin-top: -8%;
+  overflow-wrap: break-word;
+  overflow-y: hidden;
+}
+
+/* title animation */
+.the{
+  opacity: 0;
+  animation: textenter 3s;
+  animation-delay: 1.0s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.new{
+  opacity: 0;
+  animation: textenter 3s;
+  animation-delay: 1.2s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.art{
+  opacity: 0;
+  animation: textenter 3s;
+  animation-delay: 1.4s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.of{
+  opacity: 0;
+  animation: textenter 3s;
+  animation-delay: 1.6s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.making{
+  opacity: 0;
+  animation: textenter 3s;
+  animation-delay: 1.8s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.books{
+  opacity: 0;
+  animation: textenter 3s;
+  animation-delay: 2s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.names{
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: -10% 1% 0% 3%;
+  margin-left: 3%;
+  margin-right: 1%;
+  opacity: 0;
+  animation: textenter 3s;
+  animation-delay: 3s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+h3{
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 5vh;
+}
+h4{
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2vh;
+}
+#themis{
+  margin-top: 6%;
+}
+/* creating dividers */
+.section-divider{
+  height: 40vh;
+  width: 100vw;
+}
+.content-divider{
+  height: 20vh;
+  width: 100vw;
+}
+
+.content-divider-1{
+  width: 100vw;
+  height: 60vh;
+}
+
+#stop, #endTwo{
+  height: 30vh;
+
+}
+/* section title */
+.section-title{
+  width: 100vw;
+  height: 100vh;
+  margin-left: -4%;
+}
+.section-title:hover{
+  transform: skewX(10deg);
+}
+h2{
+  font-family: roc-grotesk-wide, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15vh;
+  text-align: end;
+}
+
+h2:hover{
+  color: rgb(233, 122, 78);
+}
+/* horizontal section content */
+::-webkit-scrollbar {
+  width: 0vw;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3a2d28; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6e5348; 
+}
+
+#white-wrap{
+  background-color: #EAE7E7;
+  z-index: -1;
+  width: 100vw;
+  overflow-y: hidden;
+  bottom: -100vh;
+}
+
+.white-wrap{
+  background-color: #EAE7E7;
+  z-index: -1;
+  width: 100vw;
+  height: auto;
+}
+
+.white-wrap-read{
+  background-color: #EAE7E7;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+#white-wrap-horz{
+  height: 100vh;
+  width: 100vw;
+  background-color: #EAE7E7;
+  overflow-y: hidden;
+}
+
+#white-wrap-horz-1{
+  height: 100vh;
+  width: 100vw;
+  background-color: #EAE7E7;
+  overflow-y: hidden;
+}
+
+
+.slide-horz{
+height: fit-content;
+}
+
+.horz-container{
+  display:block;
+  width:50%;
+  height:100vw;
+  overflow-y:auto;
+  overflow-x:hidden;
+  transform:rotate(-90deg) translateY(-100vh);
+  transform-origin:right top;
+}
+.horz-container > div{
+  display:block;
+  transform:rotate(90deg);
+  transform-origin: right top;
+  margin-left: -14vw;
+  width: 100vh;
+  height: 150vw;
+  overflow: scroll;
+}
+.horz-content > div{
+  text-align: left;
+  align-content: center;
+} 
+
+p {
+  font-size: 6vh;
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #6e5348;
+}
+
+/* prose */
+.prose-text, .poetry-text{
+  margin: 0% 30% 0% 1%;
+}
+
+.poetry{
+  overflow: hidden;
+  height: 370vh;
+}
+
+/* poetry */
+.poetry-text-2{
+  color: #6e5348;
+  font-family: roc-grotesk-extrawide, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: absolute;
+  font-size: 7vh;
+  margin-left: 50%;
+  z-index: 3;
+  transform: translateY(-350vh);
+}
+
+.poetry-text-3{
+  font-size: 6vh;
+  color: #6e5348;
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  position: absolute;
+  margin-right: 100%;
+  z-index: 3;
+  transform: translateY(-400vh);
+}
+
+.poetry-text-4{
+  font-size: 8vh;
+  color: #6e5348;
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  position: absolute;
+  z-index: 3;
+  transform: translate(30vw, -400vh);
+
+}
+
+.poetry-text-5{
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 8vh;
+  color: #6e5348;
+  z-index: 3;
+  transform: translate(10vw, -400vh);
+}
+
+/* space */
+.space, .language{
+  margin: 0% 30% 0% 1%;
+}
+
+/* reading */
+.reading{
+  font-size: 2vh;
+  color: #6e5348;
+  animation: textsize 6s alternate infinite ease-in-out;
+  margin: 20%;
+}
+
+/* end */
+
+/* animations */
+@keyframes textenter{
+  from{opacity: 0%;}
+  to{opacity: 100%;}
+}
+
+@keyframes textsize {
+  from{transform: scale(1);}
+  to{transform: scale(3);}
+}
+
+/* transitions */
+.reveal{
+  position: relative;
+  transform: translateY(10vh);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide{
+  position: relative;
+  transform: translateX(10vw);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.slide.active{
+  transform: translateX(-10vw);
+  opacity: 1;
+}
+
+.slide-horz{
+  position: relative;
+  transform: translateX(10vw);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.slide-horz.active{
+  transform: translateX(0vw);
+  opacity: 1;
+}
+
+.reveal-horz{
+  position: relative;
+  transform: translateX(10vh);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reveal-horz.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.bye{
+  animation: textenter 3s ease-in-out alternate-reverse infinite;
+}
+
+.byebye{
+  animation: textenter 3s ease-in-out alternate-reverse infinite;
+  animation-delay: 2s;
+}
+
+/* javascript-sticky */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.stickyColor{
+  position: fixed;
+  top: 10vh;
+  width: 100%;
+  color: #6e5348;
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+/* navbar */
+.navigation{
+  z-index: 5;
+  position: fixed;
+  bottom: 2%;
+  display: inline-flex;
+  margin-left: 38vw;
+}
+
+.box {
+  width: 2vw;
+  height: 2vh;
+  background-color: #5f4a42;
+}
+
+.box-div {
+  width: 2vw;
+  height: 2vh;
+}
+
+a:hover {
+  background-color: #7c6055;
+}
+
+a:active{
+  background-color: #7c6055;
+}
+
+@media screen and (max-width: 720px) {
+  body{
+    background-color: #3a2d28;
+  }
+  h1, .the, .new, .art, .of, .making, .books{
+    font-family: roc-grotesk-wide, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15vh;
+  }
+  
+  h3{
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3vh;
+  }
+  h4{
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1vh;
+  }
+
+  h2{
+    font-family: roc-grotesk-wide, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10vh;
+    text-align: end;
+  }
+
+  p {
+    font-size: 6vh;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #6e5348;
+  }
+  .navigation{
+    z-index: 5;
+    position: fixed;
+    bottom: 2%;
+    display: inline-flex;
+    margin-left: 38vw;
+  }
+  
+  .box {
+    width: 2vw;
+    height: 2vh;
+    background-color: #5f4a42;
+  }
+  
+  .box-div {
+    width: 2vw;
+    height: 2vh;
+  }
+  
+  a:hover {
+    background-color: #7c6055;
+  }
+  
+  a:active{
+    background-color: #7c6055;
+  }
+
+}
+
+@media screen and (max-width: 1200px) and (min-width:720px) {
+  @font-face {
+    font-family: anthony;
+    src: url(Anthony.woff);
+  }
+  
+  *{
+    font-family: anthony, serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #EAE7E7;
+    overflow-x: hidden;
+  }
+
+  h1, .the, .new, .art, .of, .making, .books{
+    font-family: anthony;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20vh;
+  }
+  
+  
+  body{
+    background-color: #6349FF;
+  }h3{
+    font-family: anthony;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 5vh;
+  }
+  h4{
+    font-family: anthony;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2vh;
+  }
+  h2{
+    font-family: anthony;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15vh;
+    text-align: end;
+  }
+  p {
+    font-size: 6vh;
+    font-family: monospace;
+    font-weight: 300;
+    font-style: normal;
+    color: #6349FF;
+  }
+
+  .poetry-text-2{
+    color: #6349FF;
+    font-family: roc-grotesk-extrawide, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    position: absolute;
+    font-size: 7vh;
+    margin-left: 50%;
+    z-index: 3;
+    transform: translateY(-350vh);
+  }
+  
+  .poetry-text-3{
+    font-size: 6vh;
+    color: #6349FF;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    position: absolute;
+    margin-right: 100%;
+    z-index: 3;
+    transform: translateY(-400vh);
+  }
+  
+  .poetry-text-4{
+    font-size: 8vh;
+    color: #6349FF;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    position: absolute;
+    z-index: 3;
+    transform: translate(30vw, -400vh);
+  
+  }
+  
+  .poetry-text-5{
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 8vh;
+    color: #6349FF;
+    z-index: 3;
+    transform: translate(10vw, -400vh);
+  }
+  
+
+  .reading{
+    font-size: 2vh;
+    color: #6349FF;
+    animation: textsize 6s alternate infinite ease-in-out;
+    margin: 20%;
+  }
+
+  .navigation{
+    z-index: 5;
+    position: fixed;
+    bottom: 2%;
+    display: inline-flex;
+    margin-left: 38vw;
+  }
+  
+  .box {
+    width: 2vw;
+    height: 2vh;
+    background-color: #523ada;
+  }
+  
+  .box-div {
+    width: 2vw;
+    height: 2vh;
+  }
+  
+  a:hover {
+    background-color: #6652d6;
+  }
+  
+  a:active{
+    background-color: #6652d6;
+  }
+}
