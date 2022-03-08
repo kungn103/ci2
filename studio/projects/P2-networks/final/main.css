@@ -93,6 +93,10 @@ h1, .the, .new, .art, .of, .making, .books{
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
+
+.name-div{
+  height: 100vh;
+}
 h3{
   font-family: roc-grotesk, sans-serif;
   font-weight: 500;
