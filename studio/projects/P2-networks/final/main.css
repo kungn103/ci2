@@ -557,6 +557,13 @@ color: #6e5348;
 width: 20vw;
 }
 
+
+@keyframes scooch {
+  from{transform: none;}
+  to{transform: translateX(10vw);}
+  
+}
+
 @media screen and (max-width: 720px) {
   body{
     background-color: #3a2d28;
@@ -724,11 +731,7 @@ width: 20vw;
   animation: scooch 30s alternate 2s infinite ease-in-out;
 }
 
-@keyframes scooch {
-  from{transform: none;}
-  to{transform: translateX(10vw);}
-  
-}
+
   /* poetry */
   .poetry-text-2{
     color: #6e5348;
