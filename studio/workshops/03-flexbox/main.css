@@ -1,0 +1,30 @@
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(27, 52, 85);
+    color: antiquewhite;
+}
+
+.container{
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar{
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.weekdays{
+    display: flex;
+    flex-direction: row;
+}
+
+.week{
+    display: flex;
+    flex-direction: row;
+}
