@@ -59,9 +59,18 @@ a:visited{
 a:hover{
 	transform: skewX(-10deg);
 	color: greenyellow;
+	cursor: url('cursor.cur'), auto;
 }
 
 h1{ 
 	font-size: 5vh;
  }
 
+ .falls{
+    animation: falling 4s forwards ease;
+}
+
+@keyframes falling {
+    from{transform: none;}
+    to{transform: matrix(-3,1,-2,1,100,800);}
+}

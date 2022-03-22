@@ -3,13 +3,42 @@ body{
     font-family: 'Raleway', sans-serif;
     background-color: rgb(27, 52, 85);
     color: antiquewhite;
+    font-size: 1vw;
+    overflow: hidden;
+    cursor: default;
 }
 
 .container{
     height:100vh;
     width: 100vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+}
+
+.title{
+    padding-left: 2%;
+    font-size: 1.5vw;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+h1{
+    top: -1vh;  
+    transition: ease-in-out 3s;
+}
+
+h1:hover{
+    letter-spacing: 1vw ;
+}
+
+p{
+    font-size: 1vw;
+    margin-right: 10%;
+}
+
+p:hover{
+    transform: skew(-30deg);
+    color: rgb(163, 66, 36);
 }
 
 .calendar{
@@ -17,14 +46,61 @@ body{
     width: 80vw;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
 }
 
 .weekdays{
     display: flex;
     flex-direction: row;
+    flex-shrink: 1;
+}
+
+.weekday{
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 2%;
+}
+
+.weekday:hover{
+    transform: skew(-30deg);
+    color: rgb(163, 66, 36);
 }
 
 .week{
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+}
+
+.day{
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 3%;
+}
+
+.day:hover{
+    color: darkcyan;
+}
+
+.first{
+    margin-left: 86%;
+}
+
+.last{
+    margin-right: 72%;
+}
+
+.bye{
+    opacity: 0;
+}
+
+.falls{
+    animation: falling 4s forwards ease;
+}
+
+@keyframes falling {
+    from{transform: none;}
+    to{transform: matrix(-3,1,-2,1,100,800);}
 }
