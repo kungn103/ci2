@@ -1,0 +1,134 @@
+*{
+	margin:0;
+	padding:0;
+	overflow: hidden;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+	background-color: rgb(37, 37, 37);
+}
+
+img {
+	width: 200px;
+	position: absolute;
+}
+
+img:hover{
+	transform: scale(1.5);
+}
+
+select{
+	font-size:30px;
+	margin:14px;
+	font-family: 'Courier New', Courier, monospace;
+	color: rgb(183, 255, 14);
+	background-color:rgb(37, 37, 37);
+	border: none;
+}
+
+#bee {
+	top: 10%;
+	left: 60%;
+}
+
+#jellyfish{
+	top: 35%;
+	left: 20%;
+}
+
+#snail {
+	top: 50%;
+	left: 70%;
+}
+
+#angelfish {
+	top: 50%;
+	left: 40%;
+}
+
+#clownfish {
+	top: 25%;
+	left: 83%;
+}
+
+#goldfish {
+	top: 10%;
+	left: 3%;
+}
+
+#frog {
+	top: 1%;
+	left: 30%;
+}
+
+#axolotl {
+	top: 70%;
+	left: 5%;
+}
+
+#newt {
+	top: 80%;
+	left: 80%;
+}
+
+#komodo {
+	top: 65%;
+	left: 55%;
+}
+
+#snake{
+	top: 45%;
+	left: 1%;
+}
+
+#turtle{
+	top: 18%;
+	left: 45%;
+}
+
+#dove{
+	top: 75%;
+	left: 25%;
+}
+
+#parrot{
+	top: 34%;
+	left: 58%;	
+}
+
+#pelican{
+	top: 80%;
+	left: 66%;
+}
+
+#dog{
+	top: 50%;
+	left: 85%;
+}
+
+#squirrel{
+	top: 80%;
+	left: 42%;
+	width: 150px;
+}	
+
+#mouse{
+	top: 5%;
+	left: 75%;
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
