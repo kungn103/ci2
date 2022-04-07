@@ -1,0 +1,112 @@
+body{
+    cursor: url(cursor.png), auto;
+    font-family: helvetica;
+    overflow-x: hidden;
+}
+
+
+/* veli eyes */
+.eyes{
+    position: absolute;
+    align-items: center; 
+    transform: matrix(1, -0.15, 0, 1, 40, -200);
+    z-index: 2;
+  }
+  
+.eye{
+    width: 3.5vh;
+    height: 3.5vh;
+    background-color: white;
+    border: solid black;
+    border-width: 0.4em;
+    display: inline-flex;
+    margin-left: 24px;
+    border-radius: 50%;
+    position: relative;
+    top: 10%;
+}
+ 
+.ball{
+    width: 2.5vh;
+    height: 2.5vh;
+    background:black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+
+.eyes-green{
+    position: absolute;
+    align-items: center; 
+    transform: matrix(1, -0.15, 0, 1, 40, -210);
+    z-index: 2;
+  }
+  
+.eye-green{
+    width: 3.5vh;
+    height: 3.5vh;
+    background-color: black;
+    border: solid #1FCA03;
+    border-width: 0.4em;
+    display: inline-flex;
+    margin-left: 24px;
+    border-radius: 50%;
+    position: relative;
+    top: 10%;
+}
+  
+.ball-green{
+    width: 2vh;
+    height: 2vh;
+    background:#1FCA03;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+
+/*buttons*/
+
+button{
+    background-color: white;
+    border: solid black 0.2em;
+    font-size: 10vh;
+    padding: 0.5vh 2.5vw;
+    text-align: center;
+    position: relative;
+    /* display: inline-block; */
+    font-weight: bold;
+    border-radius: 1em;
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.2);
+}
+
+/* page 1 */
+#page-1{
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+}
+
+.enter-button{
+    width: fit-content;
+    height: fit-content;
+    padding-top: 20%;
+    padding-left: 40%;
+    /* background-color: red;  */
+}
+
+/* page 2 */
+#page-2{
+    height: 100vh;
+    width: 100vw;
+    background-color: aqua;
+}
