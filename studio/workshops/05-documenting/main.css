@@ -1,0 +1,43 @@
+body{
+    font-family: Geneva;
+    text-align: center;
+}
+
+h2{
+    font-weight: bold;
+}
+
+h2:hover{
+    transform: skew(-20deg);
+}
+
+iframe{
+    width: 70%;
+    height: 60vh;
+    margin-top: 2%;
+}
+
+.title{
+    border-bottom: solid darkred;
+    width: 80%;
+    position: relative;
+    margin-left: 10%;
+}
+
+.content{
+    margin-top: 3%;
+}
+
+p{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+a{
+    font-style: italic;
+    font-size: small;
+}
+
+.click{
+    font-size: small;
+}

@@ -72,11 +72,23 @@ p{
     filter: drop-shadow(0 0 0.5rem #CAFF87);
 }
 
+/* circle shadow */
+.circle-shadow{
+    height: 50vh;
+    width: 50vh;
+    border-radius: 50%;
+    border: solid #CAFF87 7em;
+    margin-top: -30%;
+    margin-left: 14%;
+    z-index: -10;
+    filter: blur(60px);
+}
+
 /* credit */
 .credit{
     text-align: center;
     line-height: 1%;
-    margin-top: 2%;
+    margin-top: -12%;
 }
 
 /* help */
@@ -91,3 +103,4 @@ p{
 .help:hover{
     filter: drop-shadow(0 0 0.5rem #CAFF87);
 }
+
