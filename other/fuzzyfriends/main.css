@@ -1,0 +1,68 @@
+body{
+    background-color: #FFDA00;
+    color: #1B1C23;
+    font-family: 'Azeret Mono', monospace;
+    text-align: center;
+    align-content: center;
+    margin: 2%;
+}
+
+@font-face {
+    font-family: basalte;
+    src: url(Basalte-Fond.otf);
+  }
+
+
+h1{
+    font-family: basalte;
+    font-size: 7vh;
+}
+
+.save-us{
+    max-width: 60vw;
+    transition: ease-in-out;
+    animation: zoom 3s ease-in-out alternate-reverse infinite;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+@keyframes zoom {
+    from{
+        transform: scale(1);
+    }
+
+    to{
+        transform: scale(1.1);
+    }
+}
+
+img{
+    max-width: 50vw;
+}
+
+#logo{
+    height: 3em;
+}
+
+input{
+    border:none;
+    font-family: 'Azeret Mono';
+    height: 5vh;
+    font-size: 3vh;
+    color: #1B1C23;
+}
+
+#amount{
+    width: 10vw;
+}
+
+#submit{
+    background-color: #E2B224;
+}
+
+h2{
+    font-size: 3vh;
+    margin: 1%;
+}
