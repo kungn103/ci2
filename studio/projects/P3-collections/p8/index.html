@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Buttons</title>
+    <link rel='icon' href='assets/green-button.png' type='image/png'>
+    <link rel="stylesheet" href="https://use.typekit.net/ofb5rch.css">
+</head>
+<body> 
+
+    <div id="homepage" class="show">
+        <div class="title-circle">
+            <div class="title-content">
+                <h1>LOST <br> BUTTONS</h1>
+                <div class="start-button" onclick="show1()">
+                    <img class="green-button" src="assets/green-button.png" width="12%">
+                    <p class="button-text">start</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="circle-shadow"></div>
+
+        <div class="credit">
+            <h4>designed by themis</h4>
+            <h4>collection by haylee</h4>
+        </div>
+
+        <div class="help" onclick="showHelp()">
+            <h2>?</h2>
+        </div>
+    </div>  
+
+    <div id="help" class="hide">
+        <div class="flex-container">
+            <h1 id="question-mark">?</h1>
+            <p class="description">Buttons fall off all the time. The buttons are lost and confused. They got mixed up with some digital buttons. Please help the digital buttons find a new home.</p>
+        </div>
+        <div class="question-mark">
+            <svg id="question" width="205" height="325" viewBox="0 0 205 325" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M205 68.2811C205 30.5935 169.946 0 87.4134 0C47.4784 0 21.2987 7.9809 0 17.292C0.443722 47.8854 1.77489 85.1296 3.10606 109.516H4.43723L82.9762 10.1978C85.1948 9.31106 86.0822 9.31107 87.8571 9.31107C92.7381 9.31107 106.494 27.0464 106.494 68.2811C106.494 116.166 96.7316 147.647 51.4719 162.722L90.0758 208.834H96.7316L144.21 139.666C178.377 122.817 205 99.7613 205 68.2811ZM93.6255 236.323C67.4459 236.323 49.2532 254.945 49.2532 280.662C49.2532 305.935 67.4459 325 93.6255 325C119.805 325 137.998 305.935 137.998 280.662C137.998 254.945 119.805 236.323 93.6255 236.323Z" fill="#CAFF87"/>
+            </svg>
+        </div>
+        <div class="back-button" onclick="goHome()">
+            <img class="green-button" src="assets/green-button.png" width="5%">
+            <p class="button-text">back</p>
+        </div>
+    </div>
+
+    <div id="closet" class="hide">
+        <img src="assets/blue-button-up.png" alt="blue button up">
+        <div class="back-button" id="back-button" onclick="goHome()">
+            <img class="green-button" src="assets/green-button.png" width="18%">
+            <p class="button-text">back</p>
+        </div>
+    </div>
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
