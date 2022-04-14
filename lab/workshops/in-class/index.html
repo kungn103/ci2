@@ -47,8 +47,16 @@
 
       .block {
         padding: var(--margin);
-        background-color: white;
+        background-color: none;
+        border-radius: 50%;
+        overflow: hidden;
       }
+
+      .block__image{
+        border-radius: 50%;
+        width: 100%;
+      }
+
     </style>
   </head>
 
@@ -81,7 +89,7 @@
 
     <script>
       window.addEventListener('DOMContentLoaded', () => {
-        const channel = 'eggs-htpw-w3a1rc';
+        const channel = 'digital-buttons';
 
         fetch(`https://api.are.na/v2/channels/${channel}?per=100`, {cache: 'no-store'})
           .then(response => response.json())
