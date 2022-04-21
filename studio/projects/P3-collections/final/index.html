@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Buttons</title>
+    <link rel='icon' href='assets/green-button.png' type='image/png'>
+    <link rel="stylesheet" href="https://use.typekit.net/ofb5rch.css">
+</head>
+<body> 
+
+    <div id="homepage" class="show">
+        <div class="title-circle">
+            <div class="title-content">
+                <h1>LOST <br> BUTTONS</h1>
+                <div class="start-button" onclick="show1()">
+                    <img class="green-button" src="assets/green-button.png" width="15%">
+                    <p class="button-text">start</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="circle-shadow"></div>
+
+        <div class="credit">
+            <h4>designed by themis</h4>
+            <h4>collection by haylee</h4>
+        </div>
+
+        <div class="help" onclick="showHelp()">
+            <h2>?</h2>
+        </div>
+    </div>  
+
+    <div id="help" class="hide">
+        <div class="help-flex">
+            <div class="help-wrapper">
+                <h1 id="question-mark">?</h1>
+                <p class="description">Buttons fall off all the time. Sometimes they get mixed up with other buttons. These buttons are lost and confused, they got mixed up with some digital buttons but aren't quite sure how to use their new powers.</p>
+            </div>
+            <div class="help-nav">
+                <div class="back-button" onclick="goHome()">
+                    <img class="green-button" src="assets/green-button.png" width="95%">
+                    <p class="button-text">back</p>
+                </div>
+            </div>
+        </div>
+        <div class="question-mark">
+            <svg id="question" width="205" height="325" viewBox="0 0 205 325" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M205 68.2811C205 30.5935 169.946 0 87.4134 0C47.4784 0 21.2987 7.9809 0 17.292C0.443722 47.8854 1.77489 85.1296 3.10606 109.516H4.43723L82.9762 10.1978C85.1948 9.31106 86.0822 9.31107 87.8571 9.31107C92.7381 9.31107 106.494 27.0464 106.494 68.2811C106.494 116.166 96.7316 147.647 51.4719 162.722L90.0758 208.834H96.7316L144.21 139.666C178.377 122.817 205 99.7613 205 68.2811ZM93.6255 236.323C67.4459 236.323 49.2532 254.945 49.2532 280.662C49.2532 305.935 67.4459 325 93.6255 325C119.805 325 137.998 305.935 137.998 280.662C137.998 254.945 119.805 236.323 93.6255 236.323Z" fill="#CAFF87"/>
+            </svg>
+        </div>
+
+    </div>
+
+    <div id="closet" class="hide">
+        <div class="closet-flex">
+            <div class="contents">
+                <div class style=" position:relative; transform: rotate(10deg); left: 1%; top: -1%;">
+                    <img src="assets/blue-button-up.png" alt="blue button up" width="90%">
+                    <div class="button-position" style="left: 43%; top: 12.5%;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 43%; top: 14%;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 43%; top: 22%;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 43%; top: 32%">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 40%; top: 42%; width: 2vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 43%; top: 52%;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 43%; top: 61.5%">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 43%; top: 71%;">
+                        <img class="block__image" src="">
+                    </div>
+                </div>
+                <div style=" width:10%; transform: rotate(-60deg); left: 90%;">
+                    <img src="assets/black-coat.png" alt="black coat"> 
+                    <div class="button-position" style="left: 53%; top: 23%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 50%; top: 35.5%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 35%; top: 35.5%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 35%; top: 44%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                </div>
+                <div style="transform: rotate(170deg); top: -100%; left: 80%;">
+                    <img src="assets/blue-button-dress.png" alt="blue dress">
+                    <div class="button-position" style="left: 40%; top: 9%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 40%; top: 12%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 40%; top: 20%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 40.5%; top: 29%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 41%; top: 40%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 41%; top: 50%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 42%; top: 60%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 42%; top: 70%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                </div>
+                <div style="transform:rotate(-30deg); left:40%; top:-70% ">
+                    <img src="assets/blue-cardigan.png" alt="blue cardigan" width="80%">
+                    <div class="button-position" style="left: 39%; top: 30%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 38%; top: 48%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                </div>
+                <div style="transform: rotate(45deg); top: -100%;">
+                    <img src="assets/camo-jacket.png" alt="camo jacket">
+                    <div class="button-position" style="left: 30%; top: 25%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 29%; top: 38%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 12%; top: 35%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 43%; top: 35%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 29%; top: 51%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 29%; top: 64%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 30%; top: 77%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                </div>
+                <div style="transform: rotate(20deg); top: -140%; left: 80%;">
+                    <img src="assets/green-button-up.png" alt="green button up">
+                    <div class="button-position" style="left: 37.5%; top: 6%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 30%; top: 10%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 44%; top: 10%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 37.5%; top: 12%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 37%; top: 22%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 36.5%; top: 32%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 36.5%; top: 44%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 36.5%; top: 57%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 36.5%; top: 68%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                </div>
+                <div style="transform: rotate(80deg); top: -280%; left: 50%;">
+                    <img src="assets/green-dress.png" alt="green-dress">
+                    <div class="button-position" style="left: 36%; top: 8%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 24%; top: 8%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 31%; top: 16%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 31%; top: 27%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 31%; top: 38%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 31%; top: 49%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 31%; top: 60%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 31%; top: 70%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                </div>
+                <div style="transform: rotate(-5deg); top: -250%; left: 22%;">
+                    <img src="assets/green-jacket.png" alt="green jacket" width="70%">
+                    <div class="button-position" style="left: 33.8%; top: 9%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 33.8%; top: 13%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 33.8%; top: 23%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 33.8%; top: 36%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 33.8%; top: 49%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 33.8%; top: 62%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 33.8%; top: 75%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                </div>
+                <div style="transform: rotate(30deg); top: -340%; left: 30%;">
+                    <img src="assets/leather-jacket.png" alt="leather jacket">
+                    <div class="button-position" style="left: 30%; top: 7%; height: 2vh; width: 1vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 40%; top: 7%; height: 2vh; width: 1vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 27%; top: 14%; height: 2vh; width: 1vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 27%; top: 29%; height: 2vh; width: 1vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 27%; top: 45%; height: 2vh; width: 1vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 27%; top: 61%; height: 2vh; width: 1vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 27%; top: 78%; height: 2vh; width: 1vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 12%; top: 72%; height: 2vh; width: 1vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 44%; top: 78%; height: 2vh; width: 1vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 44%; top: 61%; height: 2vh; width: 1vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 44%; top: 45%; height: 2vh; width: 1vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 44%; top: 28.5%; height: 2vh; width: 1vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 44%; top: 14%; height: 2vh; width: 1vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 57%; top: 72%; height: 2vh; width: 1vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    
+                </div>
+                <div style="transform: rotate(-50deg); top: -380%; left: 50%;">
+                    <img src="assets/light-top.png" alt="light top">
+                    <div class="button-position" style="left: 43%; top: 15%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 23%; top: 33%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 59%; top: 33%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 40%; top: 28%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 39.5%; top: 41%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 39.5%; top: 57%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 40%; top: 74.5%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                </div>
+                <div style="transform: rotate(100deg); top: -410%; left: -5%;">
+                    <img src="assets/satin-jumpsuit.png" alt="satin-jumpsuit">
+                    <div class="button-position" style="left: 12%; top: 11%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 23%; top: 11%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 18%; top: 13%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 18%; top: 17%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 18%; top: 21%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 18%; top: 26%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 18%; top: 30%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 18%; top: 34%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 18.3%; top: 39%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 7%; top: 51%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                    <div class="button-position" style="left: 29%; top: 51%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="" >
+                    </div>
+                </div>
+                <div style="transform: rotate(190deg); top: -520%; left: 15%;">
+                    <img src="assets/tan-button-up.png" alt="tan button up" width="80%">
+                    <div class="button-position" style="left: 40%; top: 10%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 40%; top: 15%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 39%; top: 27%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 39%; top: 40%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 39%; top: 53%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 39%; top: 66%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 39%; top: 79%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                </div>
+                <div style="transform:rotate(40deg); top:-480%; left: 65%;">
+                    <img src="assets/yellow-button-up.png" alt="yellow button up">
+                    <div class="button-position" style="left: 35%; top: 10%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 35%; top: 14%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 35%; top: 23%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 35%; top: 35%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 35.5%; top: 47%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 35.5%; top: 59%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                    <div class="button-position" style="left: 35.5%; top: 70%; height: 1vh; width: 0.5vw;">
+                        <img class="block__image" src="">
+                    </div>
+                </div>
+                <div style="transform: rotate(-110deg); top: -590%; left: 65%;">
+                    <img src="assets/skirt.png" alt="denim skirt" width="70%">
+                    <div class="button-position"style="left: 35%; top: 8%; height: 1.5vh; width: 0.75vw;">
+                        <img class="block__image" src="">
+                    </div>
+                </div>
+ 
+            </div>
+
+            <div class="nav">
+
+                <div class="back-button" onclick="goHome()">
+                    <img class="green-button" src="assets/green-button.png" width="95%">
+                    <p class="button-text">back</p>
+                </div>
+            
+                <a href="all-buttons/index.html">
+                    <div class="all-buttons">
+                        <img class="green-button" src="assets/green-button.png" width="90%">
+                        <p class="button-text" style="font-size:2vh;">all<br> buttons</p>
+                    </div>
+                </a>
+
+            </div>
+             
+        </div>
+    </div>
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

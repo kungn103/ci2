@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Buttons</title>
+    <link rel='icon' href='../assets/green-button.png' type='image/png'>
+    <link rel="stylesheet" href="https://use.typekit.net/ofb5rch.css">
+</head>
+<body> 
+
+
+  <select> 
+		<option value="all">All</option>
+		<option value="add">Add</option>
+		<option value="arrow">Arrows</option>
+		<option value="audio">Audio</option>
+		<option value="done">Done</option>
+		<option value="trash">Delete</option>
+		<option value="follow">Follow</option>
+    <option value="like">Like</option>
+    <option value="emoji">Media</option>
+    <option value="menu">Menu</option>
+    <option value="search">Search</option>
+    <option value="share">Share</option>
+	</select>
+
+    <div class="wrapper">
+        <ul id="contents">
+        </ul>
+    </div>
+  
+      <template id="text-block">
+        <li class="block block--text">
+          <p class="block__text"></p>
+        </li>
+      </template>
+  
+      <template id="image-block">
+        <li class="block block--image all">
+          <img class="block__image" src="">
+        </li>
+      </template>
+  
+      <template id="link-block">
+        <li class="block block--link">
+          <a class="block__link" href="#"></a>
+        </li>
+      </template>
+
+<script src="../assets/jquery.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
