@@ -1,7 +1,7 @@
 body{
     background-color: #1C1C1C;
     color: whitesmoke;
-    
+    overflow: hidden;
 }
 
 :root{
@@ -75,6 +75,7 @@ ul {
   align-items: center;
   justify-items: center;
   padding: 0;
+  margin-left: 10%;
 }
 
 img {
@@ -93,6 +94,15 @@ img {
   padding: var(--margin);
   width:var(--width), 25%;
 }
+
+.wrapper{
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
 
 
 /* show/hide */
@@ -128,12 +138,12 @@ select{
 }
 
 .back-button{
-    position: relative;
+    position: sticky;
     height: fit-content;
     width: fit-content;
     z-index: 3;
     left: 5%;
-    top: -3vh;
+    top: 85vh;
 }
 
 .back-button:hover .button-text{
