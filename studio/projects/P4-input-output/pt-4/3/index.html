@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master of Advice</title>
+    <link rel='icon' href='favicon.ico' type='image/x-icon'>
+</head>
+<body> 
+    <div class="border">
+    </div>
+
+    <!-- <div id="eyetainer">
+        <div id="eyes" class="hide">
+            <div class="eye">
+                <div class="ball"></div>
+            </div>
+
+            <div class="eye">
+                <div class="ball"></div>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="eyes">
+        <div class="eye hide">
+            <svg width="45%" height="45%" viewBox="0 0 143 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="15" y="133" width="112" height="17" fill="black"/>
+                <rect x="15" width="112" height="16" fill="black"/>
+                <rect y="16" width="15" height="117" fill="black"/>
+                <rect x="127" y="16" width="16" height="117" fill="black"/>
+            </svg>
+            <div class="ball">
+                <svg width="25%" height="25%" viewBox="0 0 65 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="13" width="15" height="59" fill="black"/>
+                    <rect x="64.9595" y="1.15967" width="71.2168" height="51.3963" transform="rotate(90.2181 64.9595 1.15967)" fill="black"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="eye hide" id="right-eye">
+            <svg width="45%" height="45%" viewBox="0 0 143 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="15" y="133" width="112" height="17" fill="black"/>
+                <rect x="15" width="112" height="16" fill="black"/>
+                <rect y="16" width="15" height="117" fill="black"/>
+                <rect x="127" y="16" width="16" height="117" fill="black"/>
+            </svg>
+            <div class="ball">
+                <svg width="25%" height="25%" viewBox="0 0 65 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="13" width="15" height="59" fill="black"/>
+                    <rect x="64.9595" y="1.15967" width="71.2168" height="51.3963" transform="rotate(90.2181 64.9595 1.15967)" fill="black"/>
+                    </svg>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="robot">
+        <div class="face">
+            <div class="" id ="closed">
+                <svg  class="" width="40%" height="40%" viewBox="0 0 602 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="15" y="17" width="112" height="17" fill="black"/>
+                    <rect width="15" height="17" fill="black"/>
+                    <rect x="127" width="16" height="17" fill="black"/>
+                    <rect x="459" width="16" height="17" fill="black"/>
+                    <rect x="326.544" y="47.1169" width="29.2813" height="41.6181" transform="rotate(90.2181 326.544 47.1169)" fill="black"/>
+                    <rect x="587" width="15" height="17" fill="black"/>
+                    <rect x="475" y="17" width="112" height="17" fill="black"/>
+                    <rect x="251" y="109" width="110" height="15" fill="black"/>
+                </svg>
+            </div>
+            <div  id ="opened" class=" hide">
+                <svg width="40%" height="40%" viewBox="0 0 612 248" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="15" y="133" width="112" height="17" fill="black"/>
+                    <rect x="15" width="112" height="16" fill="black"/>
+                    <rect y="16" width="15" height="117" fill="black"/>
+                    <rect x="62" y="74" width="15" height="59" fill="black"/>
+                    <rect x="127" y="16" width="16" height="117" fill="black"/>
+                    <rect x="326.544" y="171.117" width="29.2813" height="41.6181" transform="rotate(90.2181 326.544 171.117)" fill="black"/>
+                    <rect x="126.959" y="62.1597" width="71.2168" height="51.3963" transform="rotate(90.2181 126.959 62.1597)" fill="black"/>
+                    <rect x="532" y="74.0359" width="15" height="59" fill="black"/>
+                    <rect x="469" y="16" width="16" height="117" fill="black"/>
+                    <rect x="596.959" y="62.1956" width="71.2168" height="51.3963" transform="rotate(90.2181 596.959 62.1956)" fill="black"/>
+                    <rect x="597" y="16" width="15" height="117" fill="black"/>
+                    <rect x="485" y="133" width="112" height="17" fill="black"/>
+                    <rect x="485" y="2" width="112" height="16" fill="black"/>
+                    <rect x="251" y="233" width="110" height="15" fill="black"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="viewbox">
+            <div>
+                <h1 id="enter-name" class="">enter name</h1>
+                <h1 id="troubling"class="hide">has something been troubling you <span id="name"></span>?</h1>
+                <h1 id="right-place"class="hide">you’ve come to the right place!</h1>
+                <h1 id="master"class="hide">i am the master of advice.</h1>
+                <h1 id="question"class="hide">what's been on your mind <span id="name2"></span>?</h1>
+                <h1 id="answer" class="hide answer"></h1>
+                <h1 id="bye" class="hide">well... why are you here then? bye!</h1>
+                <h1 id="welcome" class="hide">no problem! come back whenever. i'll be here. i literally can't move.</h1>
+            </div>
+        </div>
+        <div class="input">
+            <input type="text" id="fname" name="fname">
+            <input type="text" id="issue" name="issue" class="hide">
+        </div>
+        <div class="button">
+            <div id="button-1">
+                <h2 id="wake" onclick="validateForm()" class="">wake</h2>
+                <h2 id="yes" onclick="yes()" class="hide">yes</h2>
+                <h2 id="really" onclick="really()" class="hide">really?</h2>
+                <h2 id="hi" onclick="hi()" class="hide">hi!</h2>
+                <h2 id="help" onclick="helpMe()" class="hide">help me!</h2>
+                <h2 id="ok" onclick="ok()" class="hide">okay...</h2>
+                <h2 id="well" onclick="well()" class="hide">...</h2>
+                <h2 id="seeya" onclick="well()" class="hide">ok!</h2>
+            </div>
+            <div id="button-2" class="hide">
+                <h2 id="no" onclick="no()" class="hide">no</h2>
+                <h2 id="doubt" onclick="no2()" class="hide">i doubt it</h2>
+                <h2 id="thank" onclick="thankYou()" class="hide">thanks</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="responses">
+        <h1 id="1" class="hide">oh bummer! :( boo hoo</h1>
+        <h1 id="2" class="hide">i don’t care <span id="name3"></span>. <br>I’m a computer.</h1>
+        <h1 id="3" class="hide">ignore it <span id="name4"></span>.</h1>
+        <h1 id="4" class="hide">just don’t be sad <span id="name5"></span></h1>
+        <h1 id="5" class="hide">just stop worrying <span id="name6"></span>.</h1>
+        <h1 id="6" class="hide">it’s not a big deal <span id="name7"></span>.</h1>
+        <h1 id="7" class="hide">focus on the positive <span id="name8"></span>.</h1>
+        <h1 id="8" class="hide">drink more water <span id="name9"></span>.</h1>
+        <h1 id="9" class="hide"><span id="name10"></span>, other people have it worse.</h1>
+        <h1 id="10" class="hide">you're being so dramatic <span id="name11"></span>!</h1>
+        <h1 id="11" class="hide">okay.... and???</h1>
+        <h1 id="12" class="hide">so not tea.. so not slay</h1>
+        <h1 id="13" class="hide">just breathe <span id="name12"></span></h1>
+        <h1 id="14" class="hide">cheer up <span id="name13"></span>!</h1>
+        <h1 id="15" class="hide">smile more.</h1>
+        <h1 id="16" class="hide">you're making this such a big deal!</h1>
+        <h1 id="17" class="hide">you just need to get over it.</h1>
+        <h1 id="18" class="hide">there are bigger problems. <span id="name14"></span>.</h1>
+        <h1 id="19" class="hide">you're not the only one with problems <span id="name15"></span>.</h1>
+        <h1 id="20" class="hide">i think we all have problems.</h1>
+    </div>
+
+
+<script type="text/javascript" src="main.js"></script>
+
+
+</body>
+</html>
