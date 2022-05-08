@@ -1,14 +1,11 @@
-var balls = document.getElementsByClassName("ball")
-document.onmousemove = function(){
-  var x = event.clientX * 3 / window.innerWidth + "%";
-  var y = event.clientY * -10 / window.innerWidth + "%";
-
-  for(var i=0;i<2;i++){
-    balls[i].style.left = x; 
-    balls[i].style.bottom = y; 
-    balls[i].style.transform = "translate("+x+","+y+")";
-  }
-}
+const eye1 = document.getElementById('l-ball');
+const eye2 = document.getElementById('r-ball');
+window.addEventListener('mousemove', (evt) => {
+    const x = -(window.innerWidth / 2 - evt.pageX) / 20;
+    const y = -(window.innerHeight / 2 - evt.pageY) / 10;
+    eye1.style.transform = `translateY(${y}%) translateX(${x}%)`;
+    eye2.style.transform = `translateY(${y}%) translateX(${x}%)`;
+});  
 
 var speech_voices;
 if ('speechSynthesis' in window) {
@@ -34,6 +31,7 @@ function validateForm() {
   else {
       closeEyes.classList.add('hide');
       openedEyes.classList.remove('hide');
+      openedEyes.classList.add('show');
       document.getElementById('enter-name').classList.add('hide');
       document.getElementById('troubling').classList.remove('hide');
       inputFName.classList.add('hide');
@@ -41,10 +39,9 @@ function validateForm() {
       document.getElementById('yes').classList.remove('hide');
       document.getElementById('button-2').classList.remove('hide');
       document.getElementById('no').classList.remove('hide');
-      document.querySelectorAll('.eye').classList.remove('hide');
     
       let firstName = inputFName.value;
-      document.querySelector('#name').innerText = firstName.toLowerCase();
+      document.getElementById('name').innerText = firstName.toLowerCase();
       
       var msg = new SpeechSynthesisUtterance();
       msg.text = document.getElementById('troubling').innerText;
@@ -54,27 +51,6 @@ function validateForm() {
       speechSynthesis.speak(msg);
   }
 }
-
-// function openEyes() {
-//   closeEyes.classList.add('hide');
-//   openedEyes.classList.remove('hide');
-//   document.getElementById('enter-name').classList.add('hide');
-//   document.getElementById('troubling').classList.remove('hide');
-//   inputFName.classList.add('hide');
-//   document.getElementById('wake').classList.add('hide');
-//   document.getElementById('yes').classList.remove('hide');
-//   // document.getElementById('eyes').classList.remove('hide');
-
-//   let firstName = inputFName.value;
-//   document.querySelector('#name').innerText = firstName.toLowerCase();
-  
-//   var msg = new SpeechSynthesisUtterance();
-//   msg.text = document.getElementById('troubling').innerText;
-//   msg.voice =  window.speechSynthesis.getVoices()[33];
-//   msg.lang ="en-US";
-  
-//   speechSynthesis.speak(msg);
-// }
 
 function yes() {
   document.getElementById('yes').classList.add('hide');
@@ -133,48 +109,103 @@ function hi() {
 }
 
 function helpMe() {
-  document.getElementById('question').classList.add('hide');
-  document.getElementById('issue').classList.add('hide');
-  document.getElementById('help').classList.add('hide');
-  document.getElementById('ok').classList.remove('hide');
-  document.getElementById('answer').classList.remove('hide');
-  document.getElementById('button-2').classList.remove('hide');
-  document.getElementById('thank').classList.remove('hide');
-  
-  document.getElementById('issue').value ="";
-
-  function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
+  var x = issue.value;
+  if (x == "") {
+    alert("please let me know what you need help with. don't be scared");
+    return false;
   }
+
+  else {
+    document.getElementById('question').classList.add('hide');
+    document.getElementById('issue').classList.add('hide');
+    document.getElementById('help').classList.add('hide');
+    document.getElementById('ok').classList.remove('hide');
+    document.getElementById('answer').classList.remove('hide');
+    document.getElementById('answer').classList.add('color-switch');
+    document.getElementById('button-2').classList.remove('hide');
+    document.getElementById('thank').classList.remove('hide');
+    document.getElementById('opened').classList.add('hide');
+    document.getElementById('rolled-eyes').classList.remove('hide');
+    
+    document.getElementById('issue').value ="";
   
-  let random = getRandomInt(1,21);
-  let response = document.getElementById(random).innerText;
-  document.getElementById('answer').innerText = response;
-
-  let firstName = inputFName.value;
-  document.getElementById('name3').innerText = firstName.toLowerCase();
-  document.getElementById('name4').innerText = firstName.toLowerCase();
-  document.getElementById('name5').innerText = firstName.toLowerCase();
-  document.getElementById('name6').innerText = firstName.toLowerCase();
-  document.getElementById('name7').innerText = firstName.toLowerCase();
-  document.getElementById('name8').innerText = firstName.toLowerCase();
-  document.getElementById('name9').innerText = firstName.toLowerCase();
-  document.getElementById('name10').innerText = firstName.toLowerCase();
-  document.getElementById('name11').innerText = firstName.toLowerCase();
-  document.getElementById('name12').innerText = firstName.toLowerCase();
-  document.getElementById('name13').innerText = firstName.toLowerCase();
-  document.getElementById('name14').innerText = firstName.toLowerCase();
-  document.getElementById('name15').innerText = firstName.toLowerCase();
-
-
-  var msg = new SpeechSynthesisUtterance();
-  msg.text = document.getElementById('answer').innerText;
-  msg.voice =  window.speechSynthesis.getVoices()[33];
-  msg.lang ="en-US";
-
-  speechSynthesis.speak(msg);
-
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+    
+    let random = getRandomInt(1,21);
+    let response = document.getElementById(random).innerText;
+    document.getElementById('answer').innerText = response;
+  
+    let firstName = inputFName.value;
+    document.getElementById('name3').innerText = firstName.toLowerCase();
+    document.getElementById('name4').innerText = firstName.toLowerCase();
+    document.getElementById('name5').innerText = firstName.toLowerCase();
+    document.getElementById('name6').innerText = firstName.toLowerCase();
+    document.getElementById('name7').innerText = firstName.toLowerCase();
+    document.getElementById('name8').innerText = firstName.toLowerCase();
+    document.getElementById('name9').innerText = firstName.toLowerCase();
+    document.getElementById('name10').innerText = firstName.toLowerCase();
+    document.getElementById('name11').innerText = firstName.toLowerCase();
+    document.getElementById('name12').innerText = firstName.toLowerCase();
+    document.getElementById('name13').innerText = firstName.toLowerCase();
+    document.getElementById('name14').innerText = firstName.toLowerCase();
+    document.getElementById('name15').innerText = firstName.toLowerCase();
+  
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = document.getElementById('answer').innerText;
+    msg.voice =  window.speechSynthesis.getVoices()[33];
+    msg.lang ="en-US";
+  
+    speechSynthesis.speak(msg);
+  }
 }
+
+// function helpMe() {
+//   document.getElementById('question').classList.add('hide');
+//   document.getElementById('issue').classList.add('hide');
+//   document.getElementById('help').classList.add('hide');
+//   document.getElementById('ok').classList.remove('hide');
+//   document.getElementById('answer').classList.remove('hide');
+//   document.getElementById('answer').classList.add('color-switch');
+//   document.getElementById('button-2').classList.remove('hide');
+//   document.getElementById('thank').classList.remove('hide');
+//   document.getElementById('opened').classList.add('hide');
+//   document.getElementById('rolled-eyes').classList.remove('hide');
+  
+//   document.getElementById('issue').value ="";
+
+//   function getRandomInt(min, max) {
+//     return Math.floor(Math.random() * (max - min)) + min;
+//   }
+  
+//   let random = getRandomInt(1,21);
+//   let response = document.getElementById(random).innerText;
+//   document.getElementById('answer').innerText = response;
+
+//   let firstName = inputFName.value;
+//   document.getElementById('name3').innerText = firstName.toLowerCase();
+//   document.getElementById('name4').innerText = firstName.toLowerCase();
+//   document.getElementById('name5').innerText = firstName.toLowerCase();
+//   document.getElementById('name6').innerText = firstName.toLowerCase();
+//   document.getElementById('name7').innerText = firstName.toLowerCase();
+//   document.getElementById('name8').innerText = firstName.toLowerCase();
+//   document.getElementById('name9').innerText = firstName.toLowerCase();
+//   document.getElementById('name10').innerText = firstName.toLowerCase();
+//   document.getElementById('name11').innerText = firstName.toLowerCase();
+//   document.getElementById('name12').innerText = firstName.toLowerCase();
+//   document.getElementById('name13').innerText = firstName.toLowerCase();
+//   document.getElementById('name14').innerText = firstName.toLowerCase();
+//   document.getElementById('name15').innerText = firstName.toLowerCase();
+
+//   var msg = new SpeechSynthesisUtterance();
+//   msg.text = document.getElementById('answer').innerText;
+//   msg.voice =  window.speechSynthesis.getVoices()[33];
+//   msg.lang ="en-US";
+
+//   speechSynthesis.speak(msg);
+
+// }
 
 function ok() {
   document.getElementById('question').classList.remove('hide');
@@ -182,6 +213,10 @@ function ok() {
   document.getElementById('help').classList.remove('hide');
   document.getElementById('ok').classList.add('hide');
   document.getElementById('answer').classList.add('hide');
+  document.getElementById('thank').classList.add('hide');
+  document.getElementById('button-2').classList.add('hide');
+  document.getElementById('opened').classList.remove('hide');
+  document.getElementById('rolled-eyes').classList.add('hide');
 
   var msg = new SpeechSynthesisUtterance();
   msg.text = document.getElementById('question').innerText;
@@ -249,6 +284,8 @@ function thankYou() {
   document.getElementById('ok').classList.add('hide');
   document.getElementById('welcome').classList.remove('hide');
   document.getElementById('well').classList.remove('hide');
+  document.getElementById('opened').classList.remove('hide');
+  document.getElementById('rolled-eyes').classList.add('hide');
 
   var msg = new SpeechSynthesisUtterance();
   msg.text = document.getElementById('welcome').innerText;

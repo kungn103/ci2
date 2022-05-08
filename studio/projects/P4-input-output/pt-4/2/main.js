@@ -191,6 +191,12 @@ function ok() {
 
 }
 
+
+function hideButton(){
+  document.getElementById('button-2').classList.add('hide');
+  document.getElementById('thank').classList.add('hide');
+}
+
 function no() {
   document.getElementById('troubling').classList.add('hide');
   document.getElementById('button-2').classList.add('hide');
