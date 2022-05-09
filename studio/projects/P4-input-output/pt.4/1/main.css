@@ -20,7 +20,7 @@ body{
     border-style: solid;
     border-width: 0.5em 0;
     margin: auto;
-    height: 95vh;
+    height: 94vh;
     width: 95vw;
     position: relative;
     z-index: 1;
@@ -77,7 +77,7 @@ h2{
     color: #495E54;
 }
 
-/* enter name */
+/* structure */
 
 .robot{
     height: 100vh;
@@ -87,6 +87,8 @@ h2{
     left: 0;
     z-index: 2;
 }
+
+/* viewbox */
 
 .viewbox{
     margin-top: 5%;
@@ -124,6 +126,7 @@ h2{
     cursor: none;
 }
 
+/* enter name */
 .input{
     margin-top: 3%;
 }
@@ -186,6 +189,10 @@ input{
     transform: scale(1.5);
 }
 
+address{
+    font-size: 1.2em;
+    margin-top: 0.3%;
+}
 
 /* visibility */
 
@@ -203,6 +210,7 @@ input{
     background-image: 
     linear-gradient(to right, rgb(245, 84, 84),rgb(247, 183, 63),rgb(253, 253, 77),rgb(53, 99, 53),rgb(71, 71, 212),rgb(114, 63, 150),rgb(147, 79, 147)); 
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  
     animation: move 35s linear infinite;
   }
@@ -212,4 +220,141 @@ to {
     background-position: 1000vh;
 }
 }
+
+/* mobile */
+
+@media screen and (max-width: 768px) {
+
+    address{
+        font-size: 1.5em;
+        margin-top: 0.5%;
+    }
+
+    /* face */
+
+    #closed{
+        margin-top: 5em;
+    }
+    
+    #opened{
+        margin-top: 3em;
+    }
+    
+    /* eyes */
+    #rolled-eyes{
+        margin-top: 5em;
+    }
+
+    #closed-svg{
+        width: 60%;
+        height: 60%;
+    }
+
+    #eye-svg{
+        width: 14%;
+        height: 14%;    
+    }
+
+    #left-eye{
+        transform: translate(-22.8%,-20%);
+    }
+    
+    #right-eye{
+        transform: translate(22.8%,-120%);
+    }
+
+    #snout-svg{
+        width: 11%;
+        height: 11%;
+    }
+    
+    #snout{
+        margin-top: 0%;
+        margin-bottom: -20%;
+        transform: translate(1%,-210%);
+    }
+
+    #rolled-eyes{
+        margin-top: 5em;
+    }
+
+    #rolled-svg{
+        width: 60%;
+        height: 60%;
+    }
+
+    /* viewbox */
+
+    .viewbox{
+        margin-top: 15%;
+    }
+    
+    .viewbox div{
+        min-height: 6vh;
+        width: 60vw;
+    }
+
+    .viewbox div h1{
+        margin-top: 3%;
+    }
+    
+    /* type */
+    h1{
+        font-size: 6vh;
+        color: #495E54;
+    }
+    h2{
+        font-size: 4vh;
+        color: #495E54;
+    }
+
+    /* input */
+    .input{
+        margin-top: 6%;
+    }
+    
+    input{
+        height: 6vh;
+        width: 50vw;
+        font-size: 5vh;
+    }
+
+    /* buttons */
+    
+    .button{
+        margin-top: 5%;
+    }
+    
+    .button div{ 
+        height: 4vh;
+        min-width: 20vw;
+        max-width: fit-content;
+    }
+    
+    .button div h2{
+        margin-top: 6%;
+        white-space: nowrap;
+    }
+    
+    #button-1:hover{
+        transform: none;
+    }
+
+    #button-1 h2:hover{
+        color: #88c3a7;    
+    }
+    
+    #button-2{
+        margin-left: 15vw;
+    }
+    
+    #button-2:hover{
+        transform: none;
+    }
+
+    #button-2 h2:hover{
+        color: #88c3a7;    
+    }
+
+  }
 

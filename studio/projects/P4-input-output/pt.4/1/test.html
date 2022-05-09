@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel='icon' href='favicon.ico' type='image/x-icon'>
+</head>
+
+<style>
+    .eyetainer{
+height: 100vh;
+width: 100vw;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+#eyes{
+    position: relative;
+    margin: auto; 
+    z-index: 1;
+    /* background-color: red; */
+    top: 6%;
+}
+
+.eye{
+    margin-left: -12%;
+    height: fit-content;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#right-eye{
+    transform: translateX(71%);
+}
+.ball{
+    position: absolute;
+    z-index: -1;
+    width: fit-content;
+    height: fit-content;
+    margin-top:-35%;
+}
+
+
+
+
+</style>
+<body> 
+
+
+    <div class="eyetainer">
+
+        <div id="eyes">
+
+            <div class="eye ">
+                <svg width="46%" height="auto" viewBox="0 0 143 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="15" y="133" width="112" height="17" fill="black"/>
+                    <rect x="15" width="112" height="16" fill="black"/>
+                    <rect y="16" width="15" height="117" fill="black"/>
+                    <rect x="127" y="16" width="16" height="117" fill="black"/>
+                </svg>
+                
+                <div class="ball">
+                    <svg width="26%" height="auto" viewBox="0 0 65 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="13" width="15" height="59" fill="black"/>
+                        <rect x="64.9595" y="1.15967" width="71.2168" height="51.3963" transform="rotate(90.2181 64.9595 1.15967)" fill="black"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="eye " id="right-eye">
+                <svg width="46%" height="auto" viewBox="0 0 143 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="15" y="133" width="112" height="17" fill="black"/>
+                    <rect x="15" width="112" height="16" fill="black"/>
+                    <rect y="16" width="15" height="117" fill="black"/>
+                    <rect x="127" y="16" width="16" height="117" fill="black"/>
+                </svg>
+                <div class="ball">
+                    <svg width="25%" height="auto" viewBox="0 0 65 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="13" width="15" height="59" fill="black"/>
+                        <rect x="64.9595" y="1.15967" width="71.2168" height="51.3963" transform="rotate(90.2181 64.9595 1.15967)" fill="black"/>
+                        </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
