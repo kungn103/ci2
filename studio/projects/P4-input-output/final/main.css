@@ -225,6 +225,10 @@ to {
 
 @media screen and (max-width: 768px) {
 
+    body{
+        height: 90vh;
+    }
+
     address{
         font-size: 1.5em;
         margin-top: 0.5%;
