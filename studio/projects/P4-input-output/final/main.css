@@ -376,6 +376,7 @@ to {
 
     body{
         margin: auto;
+        overflow: auto;
     }
 
 
