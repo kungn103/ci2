@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the tank</title>
+    <link rel='icon' href='favicon.ico' type='image/x-icon'>
+</head>
+<body> 
+
+<!-- entrance -->
+<div id="landing" class="">
+    <h1 id="ask-name" class="">What is your name?</h1>
+    <input type="text" name="fname" id="fname"> <br>
+    <input type="button" name="submit" value="done">
+    <h1 id="welcome">Welcome to the tank, <span id="name"></span>.</h1>
+    <h1 id="welcome-2">The tank is wher all underwater creatures can coexist.</h1>
+    <h2 id="view">view tank</h2>
+    <h2 id="add">add to tank</h2>
+</div>
+
+<!-- drawing -->
+<div id="draw-input" class="">
+    <h1 id="draw-prompt">Draw any creature, real or imaginary.</h1>
+    <div id="drawing" class="">
+
+    </div>
+</div>
+
+<!-- name and save drawing -->
+<div id="name-creature" class="">
+    <h1 id="ask-creature-name">What is your creature's name?</h1>
+    <input type="text" name="cname" id="cname"> <br>
+    <input type="button" name="submit" value="done">
+    <!-- save creature creation date along with name and add 1 to count -->
+</div>
+
+<div id="save-creature" class="">
+    <h1 id="ask-save">Would you like to save an image of <span id="creature"></span>?</h1>
+    <div></div>
+    <h2 id="yes-save">yes</h2>
+    <h2 id="no-save">no</h2>
+</div>
+
+<!-- tank -->
+<div id="tank" class="">
+    <div>
+        <h1 id="hello">Hi <span id="name"></span>. It is <span id="date"></span>. <span id="time"></span>.</h1>
+        <h3 id="last-edit">the last creature added was <span id="creature"></span> by <span id="name"></span> on <span id="creation-date"></span></h3>
+        <h4 id="current">there are currently <span id="count"></span> creatures.</h4>
+    </div>
+    <div>
+        <h2 id="add">add to tank</h2>
+        <h2 id="clean">clean tank</h2>
+    </div>
+</div>
+
+<!-- clean tank -->
+<div id="clean-tank" class="">
+    <h1 id="ask-password">What is the password?</h1>
+    <input type="password" id="password" name="password">  
+    <input type="button" name="submit" value="ok"> 
+    <h3 id="ask-hint">hint</h3>
+    <h4 id="hint">how do fish make you feel?</h4>
+    <h1 id="ask-remove">How many creatures would you like to set free?</h1>
+    <input type="number" id="number" name="number">  
+    <input type="button" name="submit" value="done"> 
+</div>
+
+<address>created by themis</address>
+
+<script type="text/javascript" src="assets/main.js"></script>
+</body>
+</html>

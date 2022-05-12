@@ -1,0 +1,1 @@
+// getting inputs and putting into span classes 

@@ -369,11 +369,15 @@ to {
     .robot{
         height: 90vh;
         width: 100vw;
-        position: absolute;
         top: 10%;
         left: 0;
         z-index: 2;
     }
+
+    body{
+        margin: auto;
+    }
+
 
   }
 
