@@ -1,9 +1,195 @@
 body{
     text-align: center;
+    font-family: 'Inknut Antiqua', serif;
 }
 
+/* type */
+h1{
+    font-size: 4vh;
+}
+
+h2{
+    font-size: 2vh;
+}
+
+address{
+    position: absolute;
+    z-index: 100;
+    bottom: 1%;
+    right: 2%;
+}
+
+/* landing */
+#landing{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    /* background-color: aqua; */
+    padding-top: 30vh;
+}
+
+input{
+    border: none;
+    font-family: 'Inknut Antiqua', serif;
+    font-size: larger;
+    text-align: center;
+    background-color: transparent;
+}
+
+#submit{
+    margin-top: 1%;
+    font-size: smaller;
+}
+
+#submit:hover{
+    transform: scale(1.2);
+}
+
+#buttons{
+    display: inline-flex;
+}
+
+#buttons > h2{
+    padding: 2vw;
+}
+
+#buttons > h2:hover{
+    transform: scale(1.2);
+}
+
+/* drawing */
+#draw-input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    padding-top: 30vh;
+}
+
+#drawing{
+    height: 100vh;
+    width: 100vw;
+    top: 0%;
+    left: 0;
+    position: absolute;
+}
+
+canvas{
+    position:absolute;
+    top:10%;
+    left:20%;
+    border:3px solid;
+    cursor: url('pencil.cur'), auto;
+}
+
+input[type=button]:hover{
+    transform: scale(1.2);
+}
+
+/* name and save */
+#name-creature{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    padding-top: 30vh;
+}
+
+#save-creature{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    /* background-color: aqua; */
+    padding-top: 30vh;
+}
+
+a:hover{
+    transform: scale(1.2);
+}
+
+#buttons-2 {
+    display: inline-flex;
+}
+
+#buttons-2 > h2{
+    padding: 2vw;
+}
+
+#buttons-2 > h2:hover{
+    transform: scale(1.2);
+}
+
+/* tank */
+#tank{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    background-color: rgb(162, 234, 234);
+}
+
+#tank > div > h2:hover{
+    transform: scale(1.2);
+}
+
+img{
+    position: relative;
+}
+
+#creatures{
+    top: -15%;
+    margin-left: -10%;
+    z-index: -3;
+    user-select: none;
+}
+
+#add{
+    z-index: 10;
+}
 
 /* hide */
 .hide{
     display: none;
+}
+
+/* display */
+
+/* animation */
+
+@keyframes swim
+{
+    0% {
+        margin-left: 100%;
+      }
+      50% {
+        margin-left: 0%;
+      }
+      51% {
+        transform: rotatey(180deg);
+      }
+      100% {
+        margin-left: 100%;
+        transform: rotatey(180deg);
+      }
+    
+}
+
+.swim{
+    animation: swim 20s linear infinite reverse;
+}
+
+.swim-2{
+    animation: swim 10s linear infinite alternate-reverse;
 }

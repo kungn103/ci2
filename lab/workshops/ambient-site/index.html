@@ -6,61 +6,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>the tank</title>
     <link rel='icon' href='favicon.ico' type='image/x-icon'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
 </head>
 <body> 
 
     <!-- entrance -->
     <div id="landing" class="">
         <h1 id="ask-name" class="">what is your name?</h1>
-        <input type="text" name="fname" id="fname"> <br>
-        <input type="button" name="submit" value="done" onclick="validateFName()">
-        <h1 id="welcome">welcome to the tank, <span id="name"></span>.</h1>
-        <h1 id="welcome-2">the tank is where all underwater creatures can coexist.</h1>
-        <h2 id="view">view tank</h2>
-        <h2 id="add">add to tank</h2>
+        <input type="text" name="fname" id="fname" class=""> <br>
+        <input type="button" name="submit" id="submit" value="done" onclick="validateFName()" class="">
+        <h1 id="welcome" class="hide">welcome to the tank, <span id="name"></span>.</h1>
+        <h1 id="welcome-2" class="hide">the tank is where all underwater creatures can coexist.</h1>
+        <div id="buttons" class="hide">
+            <h2 id="view" class="hide" onclick="openTank()">view tank</h2>
+            <h2 id="add" class="hide" onclick="openDrawing()">add to tank</h2>
+        </div>
     </div>
 
     <!-- drawing -->
-    <div id="draw-input" class="">
-        <h1 id="draw-prompt">draw any creature, real or imaginary.</h1>
-        <div id="drawing" class="">
-
+    <div id="draw-input" class="hide" >
+        <h1 id="draw-prompt" class="">draw any creature, real or imaginary.</h1>
+        <div id="drawing" class="hide">
+            <body onload="init()">
+                <canvas id="canvas" width="700" height="500"></canvas>
+                <div style="position:absolute;top:10%;right:16%;width:20px;height:20px;background:#3AA345;" id="green" onclick="color(this)"></div>
+                <div style="position:absolute;top:10%;right:18%;width:20px;height:20px;background:#414EC5;" id="blue" onclick="color(this)"></div>
+                <div style="position:absolute;top:10%;right:20%;width:20px;height:20px;background:#9D2C2C;" id="red" onclick="color(this)"></div>
+                <div style="position:absolute;top:14%;right:20%;width:20px;height:20px;background:#FFEC44;" id="yellow" onclick="color(this)"></div>
+                <div style="position:absolute;top:14%;right:18%;width:20px;height:20px;background:#DB601A;" id="orange" onclick="color(this)"></div>
+                <div style="position:absolute;top:14%;right:16%;width:20px;height:20px;background:#000000;" id="black" onclick="color(this)"></div>
+                <div style="position:absolute;top:23%;right:8%;" id="pencil" onclick="color(black)">
+                    <svg width="25%" height="25%" viewBox="0 0 76 408" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Group 5">
+                        <path id="pencil-color" d="M38.5 3L48.4593 27.75H28.5407L38.5 3Z" fill="black"/>
+                        <rect id="Rectangle 2" x="4.5" y="70.5" width="67" height="336" stroke="black" stroke-width="3"/>
+                        <path id="Polygon 1" d="M7.39659 72.75L38 3.70186L68.6034 72.75H7.39659Z" stroke="black" stroke-width="3"/>
+                        <circle id="Ellipse 1" cx="23" cy="136" r="9" stroke="black" stroke-width="2"/>
+                        <circle id="Ellipse 3" r="3.5" transform="matrix(1 0 0 -1 26.5 136.5)" fill="black"/>
+                        <ellipse id="Ellipse 5" cx="38" cy="144" rx="3" ry="2" fill="black"/>
+                        <path id="Vector 2" d="M30 152C32.6667 153.509 39.6 155.622 46 152" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <path id="Vector 4" d="M15 133.5H31" stroke="black"/>
+                        <g id="Group 1">
+                        <circle id="Ellipse 11" cx="53" cy="136" r="9" stroke="black" stroke-width="2"/>
+                        <circle id="Ellipse 12" r="3.5" transform="matrix(1 0 0 -1 56.5 136.5)" fill="black"/>
+                        <path id="Vector 7" d="M45 133.5H61" stroke="black"/>
+                        </g>
+                        </g>
+                    </svg> 
+                </div>
+                <div id="white" onclick="color(this)" style="position:absolute;top:58.2%;right:2%;">
+                    <svg width="25%" height="25%" viewBox="0 0 92 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="7.5" y="1.5" width="77" height="40" rx="1.5" stroke="black" stroke-width="3"/>
+                        <rect x="1.5" y="32.5" width="89" height="129" fill="white" stroke="black" stroke-width="3"/>
+                        <circle cx="31" cy="53" r="9" stroke="black" stroke-width="2"/>
+                        <circle r="3.5" transform="matrix(1 0 0 -1 34.5 53.5)" fill="black"/>
+                        <circle cx="61" cy="53" r="9" stroke="black" stroke-width="2"/>
+                        <circle r="3.5" transform="matrix(1 0 0 -1 64.5 53.5)" fill="black"/>
+                        <ellipse cx="46" cy="61" rx="3" ry="2" fill="black"/>
+                        <path d="M38 69C40.6667 70.5092 47.6 72.6222 54 69" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M23 50.5H39M52 50.5H70" stroke="black"/>
+                        </svg>                        
+                </div>
+                <!-- <img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;"> -->
+                <input type="button" value="clear" id="clr" onclick="erase()" style="position:absolute;top:70%;left:14%;">
+                <input type="button" class="" name="submit" value="done" onclick="goName()" style="position:absolute;bottom:14%; left: 43%;">
+            </body>
         </div>
     </div>
 
     <!-- name and save drawing -->
-    <div id="name-creature" class="">
+    <div id="name-creature" class="hide">
         <h1 id="ask-creature-name">what is your creature's name?</h1>
         <input type="text" name="cname" id="cname"> <br>
         <input type="button" name="submit" value="done" onclick="validateCName()">
         <!-- save creature creation date along with name and add 1 to count -->
     </div>
 
-    <div id="save-creature" class="">
+    <div id="save-creature" class="hide">
         <h1 id="ask-save">would you like to save an image of <span id="creature"></span>?</h1>
         <div></div>
-        <h2 id="yes-save">yes</h2>
-        <h2 id="no-save">no</h2>
+        <div id="buttons-2">
+            <h2 id="yes-save" onclick="download()">yes</h2>
+            <h2 id="no-save" onclick="openTankAdd()">no</h2>
+        </div>
     </div>
 
     <!-- tank -->
-    <div id="tank" class="">
+    <div id="tank" class="hide">
         <div>
-            <h1 id="hello">hello <span id="name-2"></span>. It is <span id="weekday"></span>, <span id="day"></span> <span id="month"></span> <span id="hour"></span> <span id="minute"></span>.</h1>
-            <h3 id="last-edit">the last creature added was <span id="creature-2"></span> by <span id="name"></span> on <span id="creation-date"></span></h3>
-            <h4 id="current">there are currently <span id="count"></span> creatures.</h4>
+            <h1 id="hello">hello <span id="name-2"></span>. it is <span id="weekday"></span>, <span id="date"></span> <span id="hour"></span>:<span id="minute"></span>.</h1>
+            <h3 id="last-edit" class="hide">the last creature added was <span id="creature-2"></span> by <span id="name-3"></span>.</h3>
+            <h2 id="add" onclick="openDrawing()">add to tank</h2>
+            <!-- <h4 id="current">there are currently <span id="count"></span> creatures.</h4> -->
         </div>
-        <div>
-            <h2 id="add">add to tank</h2>
+        <div id="creatures">
+            <img id="creature-1" src="assets/sad.png" class="swim">
+            <img id="creature-2" src="assets/loops.png" class="swim" style="position: absolute; transform: translate(0,-10%); animation-delay: 3s;">
+            <img id="creature-3"  src="assets/bob.png" class="swim-2" style="transform: translate(10%,-150%); position: absolute; animation-delay: 1s;">
+            <img id="creature-4"  src="assets/yuppie.png" class="swim-2" style="transform: translate(20%,-30%);">
+            <img id="creature-5" src="assets/slime.png" class="swim" style="transform: translate(10%,-180%);">
+        </div>
+        <!-- <div>
+            <h2 id="add" onclick="openDrawing()">add to tank</h2>
             <h2 id="clean">clean tank</h2>
-        </div>
+        </div> -->
     </div>
 
     <!-- clean tank -->
-    <div id="clean-tank" class="">
+    <div id="clean-tank" class="hide">
         <h1 id="ask-password">what is the password?</h1>
         <input type="password" id="password" name="password">  
-        <input type="button" name="submit" value="ok" onclick=""> 
+        <input type="button" name="submit" value="ok" onclick="validatePassword()"> 
         <h3 id="ask-hint">hint</h3>
         <h4 id="hint">how do fish make you feel?</h4>
         <h1 id="ask-remove">how many creatures would you like to set free?</h1>
